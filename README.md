@@ -25,18 +25,27 @@ with input parameters such as the number of input features, hidden layers, numbe
 and activation function and the device.
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu") 
+
 print(f"Model is using device: {device}") 
+
 Instantiate the MLP model with user input 
-Model = MLP(num_input, hidden_layers, num_output, 
-activation_function=activation_function, device=device) 
+
+Model = MLP(num_input, hidden_layers, num_output, activation_function=activation_function, device=device) 
+
 
 
 A. MNIST dataset: For a sample execution, I have used the parameters below for model training. 
-- Parameters: 
-Number of hidden layers: 2 
+
+- Parameters:
+- 
+Number of hidden layers: 2
+
 Neurons in each layer sequentially: 200, 200 
+
 Activation function: relu 
+
 Optimization method: sgd 
+
 MLP( 
 (activation_function): ReLU() 
 (layers): ModuleList( 
@@ -46,10 +55,14 @@ MLP(
 ) 
 ) 
 
+
 a) Training and validation accuracy after each epoch-  
+
 Below graph shows training and validation accuracy after each epoch.
+
 At epoch 0: 
 Training accuracy is 75.93 and validation accuracy is 89.11 
+
 At epoch 99: 
 Training accuracy is 100 and validation accuracy is 97.62. 
 
@@ -57,6 +70,7 @@ Training accuracy is 100 and validation accuracy is 97.62.
 
 b) Testing accuracy- 
 Testing accuracy with the best model is 97.90 
+
 c) Confusion matrix- 
 Confusion matrix is diagonally dominant. So, all the images (almost) are classified correctly.
 
