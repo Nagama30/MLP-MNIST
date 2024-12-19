@@ -37,7 +37,6 @@ Model = MLP(num_input, hidden_layers, num_output, activation_function=activation
 A. MNIST dataset: For a sample execution, I have used the parameters below for model training. 
 
 - Parameters:
-- 
 Number of hidden layers: 2
 
 Neurons in each layer sequentially: 200, 200 
